@@ -81,43 +81,44 @@
 
 <script>
    
-   //iphone price calculation...
+   //Increment button...
    const counter = document.getElementById("counter");
    const priceIphone = document.getElementById("price")
    const increment = document.getElementById("increment");
    increment.addEventListener('click', function(){
       var count = counter.value = parseFloat(counter.value) + 1;
-      console.log("counter", count);
+      // console.log("counter", count);
       var countValue = document.getElementById("counter").value;
       
       var price = document.getElementById("price").innerText;
       var priceInt = parseFloat(price);
-      console.log(priceInt);
+      // console.log(priceInt);
 
       var totalPrice = countValue * 1219;
-         console.log(totalPrice);
-         document.getElementById("price").innerText = totalPrice;
+         // console.log(totalPrice);
+         document.getElementById("price").innerText = totalPrice; //It works...
 
     })
 
-
+    //Decrement button...
    const counterTwo = document.getElementById("counter");
    const priceIphoneTwo = document.getElementById("price")
    const decrement = document.getElementById("decrement");
    decrement.addEventListener('click', function(){
       var count = counter.value = parseFloat(counter.value) - 1;
-      console.log("counter", count);
+      // console.log("counter", count);
 
       var countValue = document.getElementById("counter").value;
-      console.log(countValue)
+      // console.log(countValue)
 
       const priceIphoneTwo = document.getElementById("price").innerText;
       const priceIphoneTwoInt = parseFloat(priceIphoneTwo);
-      console.log(priceIphoneTwoInt)
+      // console.log(priceIphoneTwoInt)
 
-      var totalPriceTwo = priceIphoneTwoInt - 1219;
+      var totalPriceTwo = priceIphoneTwoInt - 1219;     //It doesn't works....
       
-      console.log(totalPriceTwo);
+      // console.log(totalPriceTwo);   
+
 
     })
 
