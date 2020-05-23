@@ -25,11 +25,11 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="decrement" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input  id="counter" type="text" class="form-control text-center" value="1">
-                           <button id="increment" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button id="minus-btn-ph" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input  id="amount-ph" type="text" class="form-control text-center" value="0">
+                           <button id="plus-btn-ph" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$ <span id="price">1219</span></h5>
+                        <h5>$ <span id="price-ph">0</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -43,12 +43,12 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button id="minus-btn-cs" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="amount-cs" type="text" class="form-control text-center" value="0">
+                           <button id="plus-btn-cs" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$59</h5>
+                        <h5>$ <span id="price-cs">0</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -58,15 +58,15 @@
                   <div class="row">
 
                      <div class="col-md-8">
-                        <h5>Subtotal: </h5>
+                        <h5>Subtotal:</h5>
                         <h5>Tax:</h5>
                         <h5>Total:</h5>
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5>$1,278</h5>
-                        <h5>$0</h5>
-                        <h5>$1,278</h5>
+                        <h5>$ <span id="subTotal">0</span></h5>
+                        <h5>$ <span id="tax">0</span></h5>
+                        <h5>$ <span id="total">0</span></h5>
                      </div>
                   </div>
                </div>
@@ -79,48 +79,49 @@
    </section>
 </body>
 
-<script>
+<script src="main.js">
    
    //Increment button...
-   const counter = document.getElementById("counter");
-   const priceIphone = document.getElementById("price")
-   const increment = document.getElementById("increment");
-   increment.addEventListener('click', function(){
-      var count = counter.value = parseFloat(counter.value) + 1;
-      // console.log("counter", count);
-      var countValue = document.getElementById("counter").value;
+
+   // const counterPh = document.getElementById("counterPh");
+   // const pricePh = document.getElementById("pricePh")
+   // const incrementPh = document.getElementById("incrementPh");
+   // incrementPh.addEventListener('click', function(){
+   //    var count = counterPh.value = parseFloat(counterPh.value) + 1;
+   //    // console.log("counter", count);
+   //    var countValue = document.getElementById("counterPh").value;
       
-      var price = document.getElementById("price").innerText;
-      var priceInt = parseFloat(price);
-      // console.log(priceInt);
+   //    var price = document.getElementById("pricePh").innerText;
+   //    var priceInt = parseFloat(price);
+   //    // console.log(priceInt);
 
-      var totalPrice = countValue * 1219;
-         // console.log(totalPrice);
-         document.getElementById("price").innerText = totalPrice; //It works...
+   //    var totalPrice = countValue * 1219;
+   //       // console.log(totalPrice);
+   //       document.getElementById("pricePh").innerText = totalPrice; //It works...
 
-    })
+   //  })
 
-    //Decrement button...
-   const counterTwo = document.getElementById("counter");
-   const priceIphoneTwo = document.getElementById("price")
-   const decrement = document.getElementById("decrement");
-   decrement.addEventListener('click', function(){
-      var count = counter.value = parseFloat(counter.value) - 1;
-      // console.log("counter", count);
+   //  //Decrement button...
+   // const counterTwo = document.getElementById("counter");
+   // const priceIphoneTwo = document.getElementById("price")
+   // const decrement = document.getElementById("decrement");
+   // decrement.addEventListener('click', function(){
+   //    var count = counter.value = parseFloat(counter.value) - 1;
+   //    // console.log("counter", count);
 
-      var countValue = document.getElementById("counter").value;
-      // console.log(countValue)
+   //    var countValue = document.getElementById("counter").value;
+   //    // console.log(countValue)
 
-      const priceIphoneTwo = document.getElementById("price").innerText;
-      const priceIphoneTwoInt = parseFloat(priceIphoneTwo);
-      // console.log(priceIphoneTwoInt)
+   //    const priceIphoneTwo = document.getElementById("price").innerText;
+   //    const priceIphoneTwoInt = parseFloat(priceIphoneTwo);
+   //    // console.log(priceIphoneTwoInt)
 
-      var totalPriceTwo = priceIphoneTwoInt - 1219;     //It doesn't works....
+   //    var totalPriceTwo = priceIphoneTwoInt - 1219;     //It doesn't works....
       
-      // console.log(totalPriceTwo);   
+   //    // console.log(totalPriceTwo);   
 
 
-    })
+   //  })
 
    
 </script>
